@@ -235,7 +235,7 @@ class PositionField(models.IntegerField):
             for field in self.auto_now_fields:
                 updates[field.name] = right_now
 
-        if updated is None and created:
+        if updated is None:
             updated = -1
 
         if created or collection_changed:
